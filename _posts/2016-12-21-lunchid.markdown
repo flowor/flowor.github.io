@@ -1,0 +1,23 @@
+---
+layout: post
+title:  LunchID
+permalink: lunchid
+category: project
+github: https://github.com/flowor/lunchid
+description: A web application that verifies a student's lunch plan using their ID card
+---
+
+# {{page.title}}
+{{page.description}} --- [{{page.github}}]({{page.github}} "View on GitHub")
+
+
+---
+
+### The Problem
+My Highschool offered multiple lunch plans. A Monday-Wednesday-Friday plan, and an everyday plan. They had a paper list of students and would check students off by their name as they walked through the line. It was a rather slow and tedious process.
+
+### The Solution
+Each student already had their own id card with each containing a unique barcode. I implemented a system where students scanned their card as they walked through the line. The program shows the student's information (Student ID, Name, Grade, Lunch Plan) as listed in a MySql database and logs the action.
+
+{:.preview}
+![Preview of Application]({{baseurl}}/assets/img/lunchid.png)

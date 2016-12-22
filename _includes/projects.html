@@ -1,0 +1,13 @@
+<section class="projects">
+
+  <h3>Projects</h3>
+  {% for post in site.posts %}
+    {% if post.category contains "project" %}
+      <div class="item">
+          <h4 class="project-title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
+          <p class="project-desc">{{ post.description }}</p>
+      </div><!--//item-->
+    {% endif %}
+  {% endfor %}
+
+</section>
