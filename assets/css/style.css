@@ -65,3 +65,18 @@ footer {
 .preview img {
   max-width: 820px;
 }
+
+.error {
+  text-align: center;
+}
+
+.error h1 {
+  font-size: 62px;
+}
+
+@media (max-width: 1035px) {
+  .wrapper {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+}
