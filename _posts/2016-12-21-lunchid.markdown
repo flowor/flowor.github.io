@@ -13,7 +13,7 @@ description: A web application that verifies a student's lunch plan using their 
 
 ---
 
-### The Problem
+### The Situation
 My Highschool offered multiple lunch plans. A Monday-Wednesday-Friday plan, and an everyday plan. They had a paper list of students and would check students off by their name as they walked through the line. It was a rather slow and tedious process.
 
 ### The Solution
