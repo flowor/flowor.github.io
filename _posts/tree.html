@@ -1,0 +1,84 @@
+---
+layout: post
+title:  Tree Fractal
+permalink: tree-fractal
+category: project
+description: A simple tree fractal program
+---
+
+<canvas id="canvas" width="1280" height="720"></canvas>
+<script>
+angle = (Math.PI/4);
+size = 100;
+
+
+// angle = (Math.random()*5.49778714378214)+(Math.PI/4);
+window.onload=function() {
+  canvas = document.getElementById('canvas');
+  canvas.width = window.innerWidth*0.8;
+  canvas.height = window.innerHeight*0.8;
+  ctx = canvas.getContext('2d');
+  setInterval(update, 1000/30);
+  canvas.addEventListener('mousemove',function(e){
+    angle = (2*Math.PI)-((2*Math.PI)*(e.clientX/canvas.width));
+    size = 310-(300*(e.clientY/canvas.height));
+  });
+}
+
+function update() {
+
+  // Fill the canvas with a black background
+  ctx.fillStyle = 'black';
+  ctx.fillRect(0,0,canvas.width,canvas.height);
+
+  // Write out the angle and size - top left corner
+  ctx.fillStyle = 'white';
+  ctx.fillText("Angle: "+angle,50,50);
+  ctx.fillText("Size: "+size,50,65);
+
+  // Save origin at 0,0 for background
+  ctx.save();
+
+  // Position the origin to the center bottom
+  ctx.translate(canvas.width/2,canvas.height);
+  ctx.strokeStyle = 'white';
+  branch(size);
+
+  // Restore origin to 0,0 so that the background can draw from 0,0
+  ctx.restore();
+}
+
+function branch(s) {
+  // ctx.lineWidth = s*0.06;
+  ctx.save();
+
+  // Basic function draws a line from bottom center to desired y-chord
+  ctx.line(0,-s);
+
+  // As long as the size is greater than the minimum
+  if (s > 4) {
+    // Move the origin to the end of the line
+    ctx.translate(0,-s);
+
+    // Right Branch
+    ctx.save();
+    ctx.rotate(angle);
+    branch(s*0.6);
+
+    // Left Branch
+    ctx.restore();
+    ctx.rotate(-angle);
+    branch(s*0.6);
+  }
+  ctx.restore();
+}
+
+// Prototype line drawing from 0,0
+CanvasRenderingContext2D.prototype.line = function(x, y) {
+  this.beginPath();
+  this.moveTo(0,0);
+  this.lineTo(x,y);
+  this.stroke();
+}
+
+</script>
