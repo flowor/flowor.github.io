@@ -32,17 +32,17 @@ window.onload=function() {
   canvas.addEventListener('mousemove',function(e){
     update();
     angle = (2*Math.PI)-((2*Math.PI)*(e.clientX/canvas.width));
-    size = 310-(300*(e.clientY/canvas.height));
+    size = (canvas.height/2)-(((canvas.height/2)-10)*(e.clientY/canvas.height));
   });
   canvas.addEventListener('touchmove',function(e){
     update();
     angle = (2*Math.PI)-((2*Math.PI)*(event.touches[0].pageX/canvas.width));
-    size = 310-(300*(event.touches[0].pageY/canvas.height));
+    size = (canvas.height/2)-(((canvas.height/2)-10)*(event.touches[0].pageY/canvas.height));
   });
   canvas.addEventListener('touchmove',function(e){
     update();
     angle = (2*Math.PI)-((2*Math.PI)*(event.touches[0].pageX/canvas.width));
-    size = 310-(300*(event.touches[0].pageY/canvas.height));
+    size = (canvas.height/2)-(((canvas.height/2)-10)*(event.touches[0].pageY/canvas.height));
   });
   window.addEventListener('resize',function(e){
     canvas.width = window.innerWidth;
