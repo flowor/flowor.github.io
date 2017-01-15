@@ -14,8 +14,9 @@ window.onload=function() {
   canvas.width = window.innerWidth*0.8;
   canvas.height = window.innerHeight*0.8;
   ctx = canvas.getContext('2d');
-  setInterval(update, 1000/30);
+  update();
   canvas.addEventListener('mousemove',function(e){
+    update();
     angle = (2*Math.PI)-((2*Math.PI)*(e.clientX/canvas.width));
     size = 310-(300*(e.clientY/canvas.height));
   });
