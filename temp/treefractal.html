@@ -20,6 +20,11 @@ window.onload=function() {
     angle = (2*Math.PI)-((2*Math.PI)*(e.clientX/canvas.width));
     size = 310-(300*(e.clientY/canvas.height));
   });
+  canvas.addEventListener('touchstart',function(e){
+    update();
+    angle = (2*Math.PI)-((2*Math.PI)*(event.touches[0].pageX/canvas.width));
+    size = 310-(300*(event.touches[0].pageY/canvas.height));
+  });
 }
 
 function update() {
