@@ -1,0 +1,191 @@
+@import 'reset';
+
+$rich-black: #00171F;
+$bright-white: #F4F7F5;
+$dim-white: #A0A8AA;
+
+html, body {
+  height: 100%;
+  font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  background: $rich-black;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.center-wrapper {
+  height:196px;
+  width: 450px;
+  position:absolute;
+  left:50%;
+  top:50%;
+  margin:-98px 0 0 -225px;
+}
+
+.center-content {
+  z-index: 1;
+  padding: 60px 0px;
+  text-align: center;
+  h1 {
+    color: $bright-white;
+    font-size: 76px;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 700;
+    letter-spacing: -4px;
+  }
+}
+
+.menu {
+  background: $rich-black;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  margin: 0 auto;
+  padding: 20px 0px;
+  min-width: 500px;
+  text-transform: capitalize;
+  z-index: 9;
+  position: fixed;
+  width: 100%;
+
+  li {
+    display: inline-block;
+
+    a {
+      display: block;
+      padding: 8px 14px;
+      margin: 0px 6px;
+      text-align: center;
+      color: $dim-white;
+    }
+
+    a:hover, #active{
+      color: $bright-white;
+    }
+  }
+
+  ul {
+    text-align: center;
+  }
+}
+
+section {
+  min-height: 50%;
+  position: relative;
+}
+
+#home {
+  background: $rich-black;
+  min-height: 100%;
+}
+
+.projects {
+  background: $bright-white;
+  color: $rich-black;
+}
+
+.about {
+  background: $rich-black;
+  color: $dim-white;
+}
+
+.contact {
+  background: $bright-white;
+  color: $rich-black;
+}
+
+.content {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  padding: 60px;
+
+  max-width: 700px;
+  margin: 0 auto;
+
+  h1 {
+    font-size: 32px;
+    text-align: right;
+    margin-bottom: 24px;
+  }
+
+  h2 {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+  p {
+    text-align: justify;
+    line-height: 32px;
+    font-size: 16px;
+  }
+
+  span {
+    position:absolute;
+    top:-70px;
+  }
+}
+
+.project {
+  padding: 40px;
+  background: #eee;
+  display: block;
+  margin-bottom: 20px;
+  img{
+      width:100%;
+      max-width:600px;
+      padding: 10px;
+  }
+}
+
+footer {
+  background: $rich-black;
+  color: $dim-white;
+  font-size: 14px;
+  text-align: center;
+  padding: 30px;
+}
+
+
+@media only screen and (max-width: 500px) {
+  .menu {
+    min-width: 325px;
+    font-size: 12px;
+    padding: 30px 0px;
+    li {
+      a {
+        padding: 6px;
+        margin: 0px 4px;
+      }
+    }
+  }
+  .center-wrapper {
+    width: 350px;
+    height: 176px;
+    margin:-88px 0 0 -175px;
+  }
+
+  .center-content {
+    h1 {
+      font-size: 56px;
+    }
+  }
+
+  .content {
+
+    h1 {
+      font-size: 24px;
+      text-align: center;
+    }
+
+    p {
+      text-align: left;
+      line-height: 22px;
+      font-size: 14px;
+    }
+  }
+
+}
