@@ -48,7 +48,7 @@ table {
 html, body {
   height: 100%;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   background: #00171F; }
 
 a {
@@ -132,7 +132,8 @@ section {
   .content h2 {
     font-family: 'Overpass', sans-serif;
     font-weight: 700;
-    text-decoration: underline; }
+    font-size: 18px;
+    margin-bottom: 14px; }
   .content p {
     text-align: justify;
     line-height: 32px;
@@ -140,16 +141,22 @@ section {
   .content span {
     position: absolute;
     top: -70px; }
+  .content iframe {
+    width: 800px; }
 
 .project {
   padding: 40px;
-  background: #eee;
+  background: #e5ece8;
   display: block;
   margin-bottom: 20px; }
   .project img {
     width: 100%;
-    max-width: 600px;
-    padding: 10px; }
+    max-width: 620px;
+    margin-top: 20px; }
+  .project p {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left; }
 
 footer {
   background: #00171F;
@@ -158,7 +165,10 @@ footer {
   text-align: center;
   padding: 30px; }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 900px) {
+  .content iframe {
+    width: 500px; } }
+@media only screen and (max-width: 600px) {
   .menu {
     min-width: 325px;
     font-size: 12px;
@@ -178,9 +188,13 @@ footer {
   .content h1 {
     font-size: 24px;
     text-align: center; }
+  .content h2 {
+    font-size: 16px; }
   .content p {
     text-align: left;
     line-height: 22px;
-    font-size: 14px; } }
+    font-size: 14px; }
+  .content iframe {
+    width: 300px; } }
 
 /*# sourceMappingURL=style.css.map */

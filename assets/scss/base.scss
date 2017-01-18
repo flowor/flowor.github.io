@@ -7,7 +7,7 @@ $dim-white: #A0A8AA;
 html, body {
   height: 100%;
   font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   background: $rich-black;
 }
 
@@ -114,7 +114,8 @@ section {
   h2 {
     font-family: 'Overpass', sans-serif;
     font-weight: 700;
-    text-decoration: underline;
+    font-size: 18px;
+    margin-bottom: 14px;
   }
 
   p {
@@ -127,17 +128,25 @@ section {
     position:absolute;
     top:-70px;
   }
+
+  iframe { width: 800px; }
 }
 
 .project {
   padding: 40px;
-  background: #eee;
+  background: darken( $bright-white, 5% );
   display: block;
   margin-bottom: 20px;
-  img{
-      width:100%;
-      max-width:600px;
-      padding: 10px;
+  img {
+    width:100%;
+    max-width:620px;
+    margin-top: 20px;
+
+  }
+  p {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
   }
 }
 
@@ -149,8 +158,14 @@ footer {
   padding: 30px;
 }
 
+@media only screen and (max-width: 900px) {
+  .content {
+      iframe { width: 500px; }
+  }
+}
 
-@media only screen and (max-width: 500px) {
+
+@media only screen and (max-width: 600px) {
   .menu {
     min-width: 325px;
     font-size: 12px;
@@ -162,6 +177,7 @@ footer {
       }
     }
   }
+
   .center-wrapper {
     width: 350px;
     height: 176px;
@@ -181,10 +197,18 @@ footer {
       text-align: center;
     }
 
+    h2 {
+      font-size: 16px;
+    }
+
     p {
       text-align: left;
       line-height: 22px;
       font-size: 14px;
+    }
+
+    iframe {
+      width: 300px;
     }
   }
 
