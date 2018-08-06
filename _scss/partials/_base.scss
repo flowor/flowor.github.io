@@ -1,0 +1,68 @@
+html {
+  font-family: $main-font;
+  font-weight: 400;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  height: 100%;
+  text-align: center;
+  background: $black;
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  color: $white;
+  margin: 0px 60px;
+}
+
+
+.highlight {
+    color: $yellow;
+    font-weight: 700;
+}
+
+a {
+  @include transition;
+  color: $blue;
+  border-bottom: 2px solid $blue;
+  text-decoration: none;
+}
+
+a:hover {
+  @include transition;
+  color: $white;
+  text-decoration: none;
+}
+
+p {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+h1 {
+  font-size: 26px;
+  line-height: 40px;
+}
+
+
+.fadeUp {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-name: fadeUp;
+  animation-name: fadeUp;
+}
+
+@-webkit-keyframes fadeUp {
+  0% {opacity: 0; transform: translateY(10px); }
+  100% {opacity: 1;  }
+}
+
+@keyframes fadeUp {
+  0% {opacity: 0; transform: translateY(10px); }
+  100% {opacity: 1;  }
+}

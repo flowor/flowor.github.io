@@ -1,0 +1,13 @@
+// Colors
+$black: #282B35;
+$white: #FDFFFC;
+$yellow: #F1D302;
+$blue: #788DE2;
+
+// Fonts
+$main-font: 'Inconsolata', monospace;
+
+// Mixins
+@mixin transition {
+  transition: all 0.15s ease-in-out;
+}
