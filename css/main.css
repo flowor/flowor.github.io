@@ -46,27 +46,31 @@ table {
   border-spacing: 0; }
 
 html {
-  font-family: "Inconsolata", monospace;
+  font-family: "Raleway", sans-serif;
   font-weight: 400;
   height: 100%; }
 
 body {
-  position: relative;
+  background: #282B35;
+  width: 100%;
   height: 100%;
-  text-align: center;
-  background: #282B35; }
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  display: inline-flex; }
 
 .center-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
   color: #FDFFFC;
-  margin: 0px 60px; }
+  margin: auto auto;
+  max-width: 800px;
+  padding: 40px; }
 
 .highlight {
-  color: #F1D302;
+  color: #E85653;
   font-weight: 700; }
+
+.fas {
+  color: #F1D302; }
 
 a {
   transition: all 0.15s ease-in-out;
@@ -80,29 +84,53 @@ a:hover {
   text-decoration: none; }
 
 p {
-  font-size: 16px;
-  line-height: 22px; }
+  line-height: 34px;
+  font-size: 20px;
+  font-weight: 200; }
 
 h1 {
-  font-size: 26px;
-  line-height: 40px; }
+  margin: 0 auto;
+  font-size: 72px;
+  font-weight: 900; }
 
 .fadeUp {
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-  -webkit-animation-name: fadeUp;
-  animation-name: fadeUp; }
+  opacity: 0;
+  -webkit-animation: fadeUp ease-in 1;
+  -moz-animation: fadeUp ease-in 1;
+  animation: fadeUp ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s; }
+
+.fadeUp.one {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s; }
+
+.fadeUp.two {
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  animation-delay: 2s; }
 
 @-webkit-keyframes fadeUp {
   0% {
     opacity: 0;
-    transform: translateY(10px); }
+    transform: translateY(5px); }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(5px); }
   100% {
     opacity: 1; } }
 @keyframes fadeUp {
   0% {
     opacity: 0;
-    transform: translateY(10px); }
+    transform: translateY(5px); }
   100% {
     opacity: 1; } }
 
