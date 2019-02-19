@@ -55,12 +55,33 @@ h1 {
   font-weight: 900;
 }
 
+.fadeDown, .fadeUp {  
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+  opacity:0;
+
+
+}
 
 .fadeUp {
-  opacity:0;
   -webkit-animation:fadeUp ease-in 1;
   -moz-animation:fadeUp ease-in 1;
   animation:fadeUp ease-in 1;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+  
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+}
+
+.fadeDown {
+  -webkit-animation:fadeDown ease-in 1;
+  -moz-animation:fadeDown ease-in 1;
+  animation:fadeDown ease-in 1;
 
   -webkit-animation-fill-mode:forwards;
   -moz-animation-fill-mode:forwards;
@@ -69,19 +90,9 @@ h1 {
   -webkit-animation-duration:1s;
   -moz-animation-duration:1s;
   animation-duration:1s;
+
 }
 
-.fadeUp.one {
-  -webkit-animation-delay: 1s;
-  -moz-animation-delay: 1s;
-  animation-delay: 1s;
-}
-
-.fadeUp.two {
-  -webkit-animation-delay: 2s;
-  -moz-animation-delay: 2s;
-  animation-delay: 2s;
-}
 
 @-webkit-keyframes fadeUp {
   0% {opacity: 0; transform: translateY(5px); }
@@ -95,5 +106,21 @@ h1 {
 
 @keyframes fadeUp {
   0% {opacity: 0; transform: translateY(5px); }
+  100% {opacity: 1;  }
+}
+
+
+@-webkit-keyframes fadeDown {
+  0% {opacity: 0; transform: translateY(-5px); }
+  100% {opacity: 1;  }
+}
+
+@-moz-keyframes fadeDown {
+  0% {opacity: 0; transform: translateY(-5px); }
+  100% {opacity: 1;  }
+}
+
+@keyframes fadeDown {
+  0% {opacity: 0; transform: translateY(-5px); }
   100% {opacity: 1;  }
 }
