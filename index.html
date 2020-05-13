@@ -1,11 +1,61 @@
----
-layout: default
----
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Tim Rose</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-<div>
-  <h1 class="one fadeUp">My Name is Tim<span class="highlight">Rose</span></h1><br>
-  <p class="two fadeDown">I'm a Computer Science student at the 
-    <a href="https://www.umassd.edu/" target="_blank">University of Massachusetts Dartmouth</a> 
-    who is passionate about designing <i class="fas fa-pen-nib"></i> and developing <i class="fas fa-code"></i> 
-    tools to make everyday life a bit more fun! Checkout my <a href="resume.pdf">resume</a></p>
-</div>
+		<link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="assets/favicon/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+		<link rel="manifest" href="assets/favicon/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
+		<meta name="theme-color" content="#333333">
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+			<div id="main">
+
+				<!-- Header -->
+					<header id="header">
+						<img src="assets/rose.svg" width="100px" height="100px" alt="logo">
+						<!-- <nav>
+							<ol>
+								<li><a href="#">About</a></li>
+								<li><a href="#">Contact</a></li>
+								<li><a href="#">Music</a></li>
+								<li><a href="#">Woodworking</a></li>
+								<li><a href="#">Film</a></li>
+								<li><a href="#">Design</a></li>
+							</ol>
+
+						</nav> -->
+					</header>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<span class="copyright">&copy; 2020 Tim Rose</span>
+					</footer>
+
+			</div>
+		</div>
+		<script>
+			window.onload = function() { document.body.classList.remove('is-preload'); }
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+		</script>
+	</body>
+</html>
